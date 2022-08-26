@@ -61,6 +61,10 @@
     "___Section:underhood": "echo \"run commands under the hood\"",
     "prepare": "husky install"
   },
+  "dependencies": {
+    "graphql": "^16.6.0",
+    "graphql-request": "^4.3.0"
+  },
   "devDependencies": {
     "@ava/typescript": "^3.0.1",
     "@commitlint/cli": "^17.0.3",
