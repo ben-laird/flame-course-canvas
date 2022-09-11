@@ -1,19 +1,12 @@
-import test from "ava";
-import { greet } from ".";
+import anyTest, { TestFn } from "ava";
+import { grabCanvasData } from ".";
 
-/**
- * A test macro to demonstrate the concept of macro testing,
- * used to test repetitive things with one implementation.
- */
-const greetMacro = test.macro((t, name: string) => {
-  const expectedMessage = `Hello there, ${name}`;
-  const returnedMessage = greet(name);
-  t.assert(
-    expectedMessage === returnedMessage,
-    "Expected message is not equal to returned message"
-  );
+const test = anyTest as TestFn;
+
+test("Grabbing Canvas Data", async (t) => {
+  const dataFromGrab = await grabCanvasData();
+
+  const assertion = dataFromGrab;
+
+  t.assert(assertion, "data from grab did not match hardcoded data!");
 });
-
-test("Greet Janet", greetMacro, "Janet");
-
-test("Greet Marcos", greetMacro, "Marcos");

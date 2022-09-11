@@ -1,6 +1,7 @@
 import { gql, GraphQLClient } from "graphql-request";
 
-export const gqlEndpoint = process.env.CANVAS_ENDPOINT;
+export const gqlEndpoint =
+  "https://libertyuniversity.instructure.com/api/graphql";
 
 export const query = gql`
   query MyQuery {
